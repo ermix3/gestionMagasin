@@ -23,7 +23,8 @@ while True:
             4. Afficher la liste des produits
             5. Afficher la liste des livres
             6. Afficher la liste des CDs
-            7. Quitter
+            7. Sauvegarder les donnees
+            8. Quitter
             """)
             choix2 = input("Votre choix : ")
             if choix2 == "1":
@@ -72,6 +73,8 @@ while True:
                 else:
                     print("Aucun CD")
             elif choix2 == "7":
+                magasin.enregistrer_donnees()
+            elif choix2 == "8":
                 break
             else:
                 print("Choix incorrect")

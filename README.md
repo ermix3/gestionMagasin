@@ -25,3 +25,6 @@
   - Suprimer_produit()
   - Chercher_produit()
   - ...
+
+## 3- class ProduitInexistantException
+  > class gerer l'exception d'inexistance d'un produit. 
