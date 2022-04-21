@@ -14,7 +14,7 @@ class Livre(Produit):
         Livre.nombre_livres -= 1
 
     def __str__(self)-> str:
-        return f"Produit de code: {self.code}; nom: {self.nom}; prix de vente: {self.prix_vente}; prix de achat: {self.prix_achat}; Auteur: {self.__auteur}; Editeur: {self.__editeur}; Nombre de pages:  {self.__nb_pages}."
+        return f'{super().__str__()}, Auteur: {self.__auteur}, Editeur: {self.__editeur}, Nombre de pages:  {self.__nb_pages}.'
 
     @property
     def auteur(self)->str:
@@ -46,5 +46,3 @@ class Livre(Produit):
         :return: chaine de charactere représentant le cout du livre.
         """
         return f"{self.__nb_pages * 1.95} dhs"
-
-

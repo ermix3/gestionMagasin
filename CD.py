@@ -29,5 +29,4 @@ class CD(Produit):
         self.__auteur = auteur
 
     def __str__(self)->str:
-        return f'Produit de code: {self.code}; nom: {self.nom}; prix de vente: {self.prix_vente}; prix de achat: {self.prix_achat}; Auteur: {self.__auteur}; Interprete: {self.__interprete}.'
-
+        return f'{super().__str__()}, Auteur: {self.__auteur}, Interprete: {self.__interprete}.'
