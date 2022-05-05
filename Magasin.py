@@ -50,7 +50,7 @@ class Magasin:
         for p in self.liste_produits:
             if p.code == code:
                 return p
-            
+
         raise ProduitInexistantException(
             f"Le produit de code '{code}' n'existe pas")
 
