@@ -50,9 +50,9 @@ class Magasin:
         for p in self.liste_produits:
             if p.code == code:
                 return p
-        else:
-            raise ProduitInexistantException(
-                f"Le produit de code '{code}' n'existe pas")
+            
+        raise ProduitInexistantException(
+            f"Le produit de code '{code}' n'existe pas")
 
     def liste_livres(self) -> list:
         return [produit.__str__() for produit in self.liste_produits if type(produit) == Livre]
