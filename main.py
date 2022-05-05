@@ -1,5 +1,4 @@
 from gestionMagasin.Magasin import Magasin
-from gestionMagasin.Produit import Produit
 from gestionMagasin.Livre import Livre
 from gestionMagasin.CD import CD
 from gestionMagasin.ProduitInexistantException import ProduitInexistantException

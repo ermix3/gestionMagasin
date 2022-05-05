@@ -32,7 +32,7 @@ class Magasin:
 
     def ajouter_produit(self, produit) -> None:
         try:
-            if type(self.chercher_produit(produit.code)) == Livre or type(self.chercher_produit(produit.code)) == CD:
+            if type(self.chercher_produit(produit.code)) in (Livre, CD):
                 print(f"Le produit {produit.code} existe déjà")
         except ProduitInexistantException:
             self.liste_produits.append(produit)
@@ -40,7 +40,7 @@ class Magasin:
 
     def supprimer_produit(self, code) -> None:
         try:
-            if type(self.chercher_produit(code)) == Livre or type(self.chercher_produit(code)) == CD:
+            if type(self.chercher_produit(code)) in (Livre, CD):
                 self.liste_produits.remove(self.chercher_produit(code))
                 print(f"Le produit de code '{code}' a été supprimé")
         except ProduitInexistantException:
@@ -50,9 +50,9 @@ class Magasin:
         for p in self.liste_produits:
             if p.code == code:
                 return p
-        else:
-            raise ProduitInexistantException(
-                f"Le produit de code '{code}' n'existe pas")
+
+        raise ProduitInexistantException(
+            f"Le produit de code '{code}' n'existe pas")
 
     def liste_livres(self) -> list:
         return [produit.__str__() for produit in self.liste_produits if type(produit) == Livre]
