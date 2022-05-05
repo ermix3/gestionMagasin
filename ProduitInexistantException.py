@@ -1,2 +1,3 @@
 class ProduitInexistantException(Exception):
     pass
+
